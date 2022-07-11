@@ -15,8 +15,10 @@
 }
 
 .menu {
-  &__list {
-    display: flex;
+  &__list {}
+
+  &__list-item {
+    display: inline-block;
   }
 
   &__list-item+.menu__list-item {
@@ -24,26 +26,41 @@
   }
 
   &__list-link {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-stretch: 75%;
     color: $title;
-    font-size: 26px;
+    font-size: 16px;
     line-height: 26px;
-    transition: all .3s;
     padding-bottom: 1px;
-    @extend %quicksand-400;
-    // @extend %roboto-400;
+    @extend %roboto-400;
+    transition: all .5s;
+
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
-      // @extend %roboto-500;
+      @extend %roboto-700;
+      
     }
+
+    &:before {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      
+    }
+
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
-    @extend %quicksand-500;
-    // @extend %roboto-500;
+    @extend %roboto-700;
+
   }
 }
 
