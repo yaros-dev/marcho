@@ -28,32 +28,23 @@
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
-    font-stretch: 75%;
+    font-stretch: 80%;
     color: $title;
-    padding-bottom: 1px;
+    padding: 0px 2px 1px;
     @extend %roboto-400;
     transition: all .3s;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %roboto-700;
-    }
-
-    &:before {
-      display: block;
-      content: attr(title);
-      font-weight: bold;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
+      text-shadow: 0 0 .01px $accent, 0 0 .01px $accent, 0 0 .01px $accent;
     }
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
-    @extend %roboto-700;
+    text-shadow: 0 0 .01px $accent, 0 0 .01px $accent, 0 0 .01px $accent;
   }
 }
 
@@ -167,7 +158,7 @@ footer {
     @extend %roboto-500;
     line-height: 24px;
     margin-bottom: 40px;
-    font-weight: 700;
+
   }
 
   &__box-item {
