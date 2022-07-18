@@ -9,5 +9,13 @@ $(function () {
     autoplaySpeed: 2000,
   });
 
+  $('.star').rateYo({
+    starWidth: "17px",
+    ratedFill: "#ffc35b",
+    normalFill: "#ccccce",
+    readOnly: true,
+    
+  });
+
 
 })
