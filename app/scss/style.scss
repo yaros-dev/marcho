@@ -514,6 +514,7 @@ footer {
 .product {
   padding: 105px 0 120px;
   text-align: center;
+
   &__items {
     display: grid;
     grid-gap: 45px 30px;
@@ -536,12 +537,14 @@ footer {
 
 .product-item {
   max-width: 370px;
+
   &__img-box {
     position: relative;
     height: 370px;
     overflow: hidden;
     margin-bottom: 25px;
   }
+
   &__link-box {
     position: absolute;
     left: 0;
@@ -559,6 +562,7 @@ footer {
     transform: translateY(300%);
     transition: all .3s
   }
+
   &__link--line::before,
   &__link--line::after {
     content: '';
@@ -568,21 +572,27 @@ footer {
     height: 30px;
     top: 10px;
   }
+
   &__link--line::before {
     left: 70px;
   }
+
   &__link--line::after {
     right: 70px;
   }
+
   &__link {
     display: inherit;
+
     path {
       transition: all .3s;
     }
   }
+
   &__link:hover svg path {
     fill: $accent;
   }
+
   &__title {
     @extend %roboto-400;
     color: $title;
@@ -590,6 +600,7 @@ footer {
     padding: 15px 0 20px;
     line-height: 24px;
   }
+
   &__price {
     @extend %roboto-400;
     color: $title;
@@ -597,23 +608,28 @@ footer {
     justify-content: center;
     align-content: center;
   }
+
   &__new-price {
     margin-right: 25px;
   }
+
   &__old-price {
     color: $default;
     text-decoration: line-through;
   }
+
   &__images {
     object-fit: cover;
   }
+
   &:hover {
     .product-item__link-box {
       transform: translateY(0);
     }
   }
-  &--sale{
-    .product-item__img-box::before{
+
+  &--sale {
+    .product-item__img-box::before {
       content: 'SALE';
       @extend %btn;
       position: absolute;
@@ -623,10 +639,102 @@ footer {
     }
   }
 }
- 
-.star{
+
+.star {
   margin: 0 auto;
 }
+
+.promo {
+  background-image: url('../images/promo/promo-bg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 160px 0;
+
+
+  &__inner {
+    width: 570px;
+    margin-left: auto;
+
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 22px;
+    color: $accent;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    border: 1px solid $accent;
+    padding: 14px 26px;
+    color: #000;
+    @extend %roboto-400;
+    letter-spacing: 3px;
+    margin-top: 60px;
+  }
+
+  &__clock {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__clock-item {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+    span {
+      margin-top: 15px;
+      font-size: 48px;
+      color: $title;
+      @extend %roboto-700;
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+  }
+
+
+}
+
+.partners {
+  padding-top: 120px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.blog {
+
+
+
+  &__subtitle {
+    width: 570px;
+    margin: 0 auto;
+    text-align: center;
+    @extend %quicksand-400;
+  }
+
+}
+
 
 
 
