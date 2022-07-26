@@ -37,6 +37,12 @@
    list-style: none;
  }
 
+ a,
+ a[class] {
+   text-decoration: none;
+
+ }
+
  img {
    max-width: 100%;
    display: block;
@@ -49,8 +55,5 @@
    font: inherit;
  }
 
- a,a[class] {
-   text-decoration: none;
- }
-
+ 
  
