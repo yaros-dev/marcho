@@ -6,8 +6,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const del = require('del');
-const imagemin = require('gulp-imagemin');
-
+const imagemin = require('gulp-imagemin'); 
 const browserSync = require('browser-sync').create();
 
 
@@ -42,6 +41,8 @@ function scripts() {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/icheck/icheck.js',
+    
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

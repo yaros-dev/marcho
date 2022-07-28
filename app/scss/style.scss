@@ -1083,7 +1083,8 @@ footer {
   display: none;
 }
 
-.irs--flat .irs-min, .irs--flat .irs-max {
+.irs--flat .irs-min,
+.irs--flat .irs-max {
   display: none;
 }
 
@@ -1092,8 +1093,119 @@ footer {
 .irs--flat .irs-single {
   display: none;
 }
- 
 
+.filter-color {
+
+
+  &__lable {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &+.filter-color__lable {
+      border-top: 1px solid $border-color;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .icheckbox_minimal {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    background-image: none;
+    top: -1px;
+  }
+
+  .checked {
+    background-image: url('../images/icons/check-on.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__checkbox {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: 5px;
+    z-index: -10;
+  }
+
+  &__checkbox--blue {
+    background-color: #00aeef;
+  }
+
+  &__checkbox--reg {
+    background-color: #f52574;
+  }
+
+  &__checkbox--green {
+    background-color: #24d4ac;
+  }
+
+  &__checkbox--orange {
+    background-color: #ff7e00;
+  }
+
+  &__checkbox--black {
+    background-color: #000000;
+  }
+
+  &__checkbox--purple {
+    background-color: #923899;
+  }
+}
+
+.filter-size {
+  &__lable {
+    display: flex;
+    padding: 10px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-left: 15px;
+  }
+
+  &__input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: 5px;
+    z-index: -2;
+
+  }
+
+  .icheckbox_minimal {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url('../images/icons/check-box.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s;
+  }
+
+  .checked {
+    background-image: url('../images/icons/checked-size.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
 
 
 .filter-tags {

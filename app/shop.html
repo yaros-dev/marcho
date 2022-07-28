@@ -101,14 +101,10 @@
               <h3 class="filter__title filter-price__title">
                 Price Filter
               </h3>
-              <form class="filter-price__form" action="#" >
-                <input class="filter-price__input" type="text" 
-                data-min="0"
-                data-max="999"
-                data-from="200"
-                data-to="800"
-                >
-                <label class="filter-price__label" >
+              <form class="filter-price__form" action="#">
+                <input class="filter-price__input" type="text" data-min="0" data-max="999" data-from="200"
+                  data-to="800">
+                <label class="filter-price__label">
                   <span>
                     Price:
                     $<span class="filter-price__from"></span> -
@@ -116,7 +112,7 @@
                   </span>
                   <button class="filter-price__btn" type="submit">FILTER</button>
                 </label>
-                
+
               </form>
 
               <div class="filter__inner">
@@ -124,16 +120,93 @@
               </div>
             </div>
 
-            <div class="filter-color filter__item">
-              <h3 class="filter__title">
-                Color Filter
-              </h3>
+            <div class="filter__item filter-color ">
+              <h3 class="filter__title"> Color Filter </h3>
+              <form class="filter-color__form" action="#">
+                <lable class="filter-color__lable">
+                  <span class="filter-color__text">Blue (15)</span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__checkbox filter-color__checkbox--blue"></span>
+                  </div>
+                </lable>
+                <lable class="filter-color__lable">
+                  <span class="filter-color__text">Red (09)</span>
+                  <div class="filter-color__box">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class=" filter-color__checkbox filter-color__checkbox--reg"></span>
+                  </div>
+                </lable>
+                <lable class="filter-color__lable">
+                  <span class="filter-color__text">Green (28)</span>
+                  <div class="filter-color__box">
+                    <input type="checkbox" class="filter-color__input">
+                    <span class=" filter-color__checkbox filter-color__checkbox--green"></span>
+                  </div>
+                </lable>
+                <lable class="filter-color__lable">
+                  <span class="filter-color__text">Orange (11)</span>
+                  <div class="filter-color__box">
+                    <input type="checkbox" class="filter-color__input">
+                    <span class="filter-color__checkbox filter-color__checkbox--orange"></span>
+                  </div>
+                </lable>
+                <lable class="filter-color__lable">
+                  <span class="filter-color__text">Black (05)</span>
+                  <div class="filter-color__box">
+                    <input type="checkbox" class="filter-color__input">
+                    <span class=" filter-color__checkbox filter-color__checkbox--black"></span>
+                  </div>
+                </lable>
+                <lable class="filter-color__lable">
+                  <span class="filter-color__text">Purple (21)</span>
+                  <div class="filter-color__box">
+                    <input type="checkbox" class="filter-color__input">
+                    <span class="filter-color__checkbox filter-color__checkbox--purple"></span>
+                  </div>
+                </lable>
+              </form>
             </div>
 
-            <div class="filter-size filter__item">
-              <h3 class="filter__title">
-                Size Filter
-              </h3>
+            <div class="filter__item filter-size ">
+              <h3 class="filter__title">Size Filter</h3>
+              <form class="filter-size__form" action="#">
+                <lable class="filter-size__lable">
+                  <div class="filter-size__box">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox "></span>
+                  </div>
+                  <span class="filter-size__text">X-small</span>
+                </lable>
+                <lable class="filter-size__lable">
+                  <div class="filter-size__box">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox "></span>
+                  </div>
+                  <span class="filter-size__text">Small</span>
+                </lable>
+                <lable class="filter-size__lable">
+                  <div class="filter-size__box">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox "></span>
+                  </div>
+                  <span class="filter-size__text">Medium</span>
+                </lable>
+                <lable class="filter-size__lable">
+                  <div class="filter-size__box">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox "></span>
+                  </div>
+                  <span class="filter-size__text">Large</span>
+                </lable>
+                <lable class="filter-size__lable">
+                  <div class="filter-size__box">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox "></span>
+                  </div>
+                  <span class="filter-size__text">XXL</span>
+                </lable>
+              </form>
             </div>
 
             <div class="filter-category filter__item">
