@@ -1,5 +1,20 @@
+
 $(function () {
-  
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    }
+
+  });
+
+
   $('.top-slider__inner').slick({
     arrows: false,
     dots: true,
@@ -14,9 +29,9 @@ $(function () {
     ratedFill: "#ffc35b",
     normalFill: "#ccccce",
     readOnly: true,
-    
+
   });
- 
+
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
@@ -59,4 +74,7 @@ $(function () {
 
   const deadline = $('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
-})
+
+
+});
+
