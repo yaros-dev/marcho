@@ -1,15 +1,6 @@
 
 $(function () {
-
-  $('.filter-color__input').iCheck({
-    checkboxClass: 'icheckbox_minimal',
-  });
-
-  $('.filter-size__input').iCheck({
-    checkboxClass: 'icheckbox_minimal',
-    hoverClass: 'hover'
-  });
-
+ 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     onStart: function (data) {
