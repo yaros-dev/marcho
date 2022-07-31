@@ -554,7 +554,107 @@ footer {
 }
 
 .product-item {
-  max-width: 370px;
+  min-width: 370px;
+  margin-bottom: 40px;
+  &.product-item--list {
+    max-width: 100%;
+    line-height: 22px;
+    display: flex;
+    text-align: left;
+    
+    .product-item__title {
+      text-align: left;
+    }
+
+    .product-item__img-box {
+      height: 250px;
+      min-width: 200px;
+      margin-bottom: 0;
+      img {
+        height: 250px;
+      }
+    }
+
+    .product-item__link-box {
+      background: none;
+      box-shadow: none;
+      bottom: 95px;
+      width: 115px;
+
+      .product-item__link {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .product-item__link--line {
+        display: none;
+      }
+    }
+
+    .product-item__content-box {
+      display: block;
+    }
+
+    .product-item__title {
+      order: -1;
+      width: 100%;
+      padding: 0;
+      padding-bottom: 10px;
+    }
+
+    .product-item__price {
+      order: -1;
+    }
+
+    .product-item__text {
+      margin: 10px 0 25px;
+    }
+
+
+    .product-item__btn {
+      cursor: pointer;
+      text-transform: none;
+      border: none;
+      padding: 15px 40px;
+      background-color: $title;
+      color: #fff;
+      transition: all .3s;
+      &:hover{
+        background-color: $accent;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      }
+    }
+
+    .star {
+      margin: 0;
+      margin-left: 35px;
+    }
+
+    .product-item__box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+
+    .product-item__wrapper-box {
+      padding: 30px 40px;
+      border: 1px solid $border-color;
+      border-left: none;
+    }
+
+
+
+  }
+
+  &__content-box {
+    display: none;
+  }
 
   &__img-box {
     position: relative;
@@ -617,6 +717,7 @@ footer {
     font-size: 22px;
     padding: 15px 0 20px;
     line-height: 24px;
+    text-align: center;
   }
 
   &__price {
@@ -1232,11 +1333,12 @@ footer {
 }
 
 .filter-tags {
-   
+
   &__title {
     text-transform: inherit;
   }
-  &__lable{
+
+  &__lable {
     display: inline-block;
     cursor: pointer;
     margin-bottom: 20px;
@@ -1244,25 +1346,129 @@ footer {
     padding: 6px 0
   }
 
-  &__input{
+  &__input {
     @extend %checkbox-hidden;
-      &+.filter-tags__checkbox {
-        background-color: #fff; 
-      }
-    
-      &:checked+.filter-tags__checkbox {
-        background-color: $accent;
-        color: #fff;
-        border-color: $accent;
-      }
+
+    &+.filter-tags__checkbox {
+      background-color: #fff;
+    }
+
+    &:checked+.filter-tags__checkbox {
+      background-color: $accent;
+      color: #fff;
+      border-color: $accent;
+    }
   }
 
-  &__checkbox{
+  &__checkbox {
     padding: 10px 20px;
     border: 1px solid $default;
   }
 
 }
+
+.shop-content {
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $border-color;
+    .product__item {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__filter {
+    
+    border: 1px solid $border-color;
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 16px;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__filter-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
+     line-height: 0;
+
+    &.shop-content__filter-btn--active {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+
+}
+
+.jq-selectbox__select {
+  margin-left: 30px;
+  font-size: 16px;
+  padding: 0 30px 0 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  @extend %quicksand-500;
+  color: $default;
+  text-shadow: none;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 100%;
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  border: none;
+  top: 6px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  background-image: url('../images/icons/angle-down.svg')
+}
+
+.jq-selectbox li.selected {
+  background-color: transparent;
+  color: $default;
+}
+
+.jq-selectbox__dropdown {
+
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 0;
+  border: none;
+  background: #fff;
+  box-shadow: none;
+  @extend %quicksand-500;
+
+  li {
+    color: $default;
+    @extend %quicksand-500;
+  }
+}
+
 
 
 

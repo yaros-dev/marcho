@@ -83,7 +83,8 @@ main {
     &:last-child {
       color: $accent;
       padding-right: 0;
-      &::after{
+
+      &::after {
         display: none;
       }
     }
@@ -91,5 +92,55 @@ main {
 
   &__link {
     color: inherit;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+
+  .pagination__list {
+    display: flex;
+    padding: 0 35px;
+  }
+
+  &__item {
+    padding: 0 15px;
+  }
+
+  &__arrows {
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      top: 8px;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__prev {
+    padding-left: 15px;
+
+    &::before {
+      background-image: url('../images/icons/page-left.svg');
+      left: 0;
+    }
+  }
+
+  &__next {
+    padding-right: 15px;
+
+    &::before {
+      background-image: url('../images/icons/page-right.svg');
+      right: 0;
+    }
   }
 }
