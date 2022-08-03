@@ -650,10 +650,8 @@ footer {
       border: 1px solid $border-color;
       border-left: none;
     }
-
-
-
   }
+
 
   &__content-box {
     display: none;
@@ -661,7 +659,7 @@ footer {
 
   &__img-box {
     position: relative;
-    height: 370px;
+    max-height: 370px;
     overflow: hidden;
     margin-bottom: 25px;
   }
@@ -738,6 +736,7 @@ footer {
   &__old-price {
     color: $default;
     text-decoration: line-through;
+
   }
 
   &__images {
@@ -760,6 +759,7 @@ footer {
       padding: 2px 10px;
     }
   }
+
 }
 
 .star {
@@ -1481,8 +1481,7 @@ footer {
 }
 
 .product-page {
-  padding: 120px 0 60px;
-  border-bottom: 1px solid $border-color;
+  padding-top: 120px;
 }
 
 .product-slide {
@@ -1613,6 +1612,7 @@ footer {
 
   &__color {
     margin-bottom: 30px;
+
     label {
       margin-right: 10px;
     }
@@ -1764,8 +1764,228 @@ footer {
 }
 
 
+.product-tabs {
+  padding-top: 110px;
 
+  &__top {
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #f0f0f0;
+  }
 
+  &__top-item {
+    display: inline-block;
+    margin-bottom: 5px;
+
+    &+.product-tabs__top-item {
+      margin-left: 55px;
+    }
+  }
+
+  &__top-item--active {
+    color: $title;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+  }
+}
+
+.comments {
+  margin-bottom: 40px;
+  display: flex;
+
+  &__img {
+    min-width: 71px;
+    height: 71px;
+    margin-right: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__content-top {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__content-name {
+    @extend %roboto-400;
+    color: $title;
+    position: relative;
+    padding-right: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 5px;
+      width: 1px;
+      height: 14px;
+      background-color: $default;
+    }
+  }
+
+  &__content-data {
+    padding-left: 14px;
+  }
+
+  &__content-star {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &__content-text {
+    margin-bottom: 5px;
+  }
+
+  &__content-reply {
+    display: inline-block;
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 15px;
+      height: 13px;
+      position: absolute;
+      background-image: url('../images/icons/reply.svg');
+      top: 6px;
+      left: 0;
+    }
+  }
+}
+
+.comments-form {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 60px;
+
+  &__title {
+    @extend %roboto-400;
+    font-size: 22px;
+    color: $title;
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 35px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      background-color: $accent;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__rating {
+    margin-bottom: 30px;
+  }
+
+  &__rating-title {
+    color: $title;
+    margin-right: 60px;
+  }
+
+  &__lable {
+    margin-right: 25px;
+  }
+
+  &__input {
+    @extend %radio-hidden;
+
+    &:checked+.comments-form__radio {
+      path {
+        fill: #ffc35b;
+      }
+    }
+  }
+
+  &__radio {
+    cursor: pointer;
+  }
+
+  &__box-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__text-input {
+    width: 570px;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #f0f0f0;
+    color: $default;
+  }
+
+  &__textarea {
+    border: 1px solid #f0f0f0;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    height: 225px;
+    resize: none;
+    margin-bottom: 40px;
+    color: $default;
+  }
+
+  &__btn {
+    border: none;
+    @extend %btn;
+    padding: 12px 35px;
+  }
+}
+
+.related {
+  padding: 50px 0 120px 0;
+
+  &__title {
+    padding-bottom: 50px;
+    margin: 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+
+    .product-item {
+      min-width: auto;
+      margin-bottom: 0;
+    }
+
+    .product-item__img-box {
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-item__title {
+      padding: 10px 0;
+    }
+
+    
+  }
+}
 
 
 @import 'media';
