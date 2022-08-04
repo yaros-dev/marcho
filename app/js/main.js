@@ -1,6 +1,14 @@
 
 $(function () {
 
+  $('.blog-page__slider').slick({
+    infinite: true,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="20"><path  d="M7.5 17.5c-.3203 0-.6406-.121-.8828-.3672l-6.25-6.25a1.2472 1.2472 0 0 1 0-1.7656l6.25-6.25a1.2472 1.2472 0 0 1 1.7656 0 1.2472 1.2472 0 0 1 0 1.7656L3.0156 10l5.3672 5.3672c.4922.4883.4922 1.2812 0 1.7656-.2422.2461-.5625.3672-.8828.3672Zm0 0" /></svg> </button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="20"> <path  d="M2.5 17.5c-.3203 0-.6406-.121-.8828-.3672a1.2472 1.2472 0 0 1 0-1.7656L6.9844 10 1.6172 4.6328c-.4883-.4883-.4883-1.2812 0-1.7656a1.2402 1.2402 0 0 1 1.7656 0l6.25 6.25c.4883.4844.4883 1.2773 0 1.7656l-6.25 6.25c-.2422.2461-.5625.3672-.8828.3672Zm0 0" /> </svg> </button>',
+    infinite: false,
+  });
+
   $('.product-tabs__top-item').on('click', function (e) {
     e.preventDefault();
     $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');

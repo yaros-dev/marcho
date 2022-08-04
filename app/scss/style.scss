@@ -1982,10 +1982,291 @@ footer {
     .product-item__title {
       padding: 10px 0;
     }
-
-    
   }
 }
+
+.blog-page {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__aside {
+    max-width: 370px;
+  }
+
+  &__aside-item {
+    padding: 40px 25px;
+    border: 1px solid $border-color;
+
+    .filter-search__input {
+        width: 270px;
+      }
+  }
+
+  &__aside-item+&__aside-item {
+    margin-top: 40px;
+  }
+
+  &__img {
+    height: 450px;
+  }
+
+  &__img-item{
+    width: 100%;
+    max-height: 450px;
+    }
+
+  &__item {
+    max-width: 770px;
+    margin-top: 60px;
+    transition: all .3s;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:hover {
+      box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+
+    &.blog-page__item--no-image {
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  &__popup {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    max-width: 770px;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__box {
+    border: 1px solid $border-color;
+    border-top: none;
+    padding: 40px;
+  }
+
+  &__title-link {
+    display: block;
+    transition: all .3s;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    @extend %roboto-500;
+    color: $title;
+    font-size: 22px;
+    line-height: 32px;
+
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $accent;
+
+    }
+  }
+
+  &__info {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  &__author {
+    margin-right: 30px;
+  }
+
+  &__author,
+  &__data {
+
+    position: relative;
+    color: $default;
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 2px;
+    }
+  }
+
+  &__author::before {
+    background-image: url('../images/icons/user-blog.svg');
+  }
+
+  &__data::before {
+    background-image: url('../images/icons/clock.svg');
+  }
+
+  &__text {
+    width: 100%;
+  }
+  
+  &__item--slider{
+    .blog-page__box{
+      margin-top: -8px;
+    }
+  }
+
+  &__slider {
+
+    .slick-next,
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      background-color: $accent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0px 7px 20px 0px rgba(254, 62, 87, 0.3);
+      path {
+        fill: #fff;
+      }
+    }
+
+    .slick-disabled {
+      box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+      background-color: #fff;
+      path {
+        fill: $accent;
+      }
+    }
+
+    .slick-next {
+      right: 40px;
+    }
+
+    .slick-prev {
+      left: 40px;
+    }
+     
+  }
+}
+
+
+
+.person {
+  text-align: center;
+
+  &__img {
+    margin: 0 auto 30px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 18px;
+    @extend %roboto-700;
+    color: $title;
+
+  }
+
+  &__dept {
+    color: $accent;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    margin: 0 8px;
+    transition: all .3s;
+
+    &:hover {
+      path {
+        fill: #fe3e57;
+      }
+    }
+  }
+}
+
+.lated-post {
+  &__title {
+    @extend %roboto-400;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    color: $title;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 0 20px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__img-link {
+    margin-right: 20px;
+
+  }
+
+  &__img {
+    min-width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  &__box {
+    @extend %roboto-400;
+  }
+
+  &__box-title {
+    font-size: 16px;
+    color: $title;
+    line-height: 28px;
+  }
+
+  &__data {
+    padding-left: 25px;
+    line-height: 28px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 5px;
+      left: 0;
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+}
+
+
 
 
 @import 'media';
