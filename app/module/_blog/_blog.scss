@@ -1,0 +1,125 @@
+.blog {
+  background-image: url('../images/blog/blog-bg.png');
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: center 80%;
+  padding: 120px 0 160px;
+
+  &__subtitle {
+    width: 570px;
+    margin: 0 auto;
+    text-align: center;
+    @extend %quicksand-400;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/decor/blog-after-bg.svg');
+      height: 53px;
+      width: 126px;
+      top: 20px;
+      right: -26px;
+      z-index: -1;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+      border: 1px solid #fff;
+
+      .blog__item-link {
+        color: $accent;
+      }
+
+      .blog__item-link::after {
+        background-image: url('../images/icons/arrow-accent.svg');
+      }
+
+    }
+  }
+
+  &__item-imglink {
+    display: block;
+
+    img {
+      height: 288px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-box {
+    padding: 30px 40px;
+  }
+
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__item-author,
+  &__item-data {
+    padding-left: 30px;
+    position: relative;
+    color: $default;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 2px;
+    }
+  }
+
+  &__item-author::before {
+    background-image: url('../images/icons/user-blog.svg');
+  }
+
+  &__item-data::before {
+    background-image: url('../images/icons/clock.svg');
+  }
+
+  &__item-title {
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 32px;
+    color: $title;
+  }
+
+  &__item-link {
+    margin-top: 25px;
+    display: flex;
+    @extend %quicksand-500;
+    color: $default;
+    position: relative;
+    transition: all .3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 8px;
+      top: 9px;
+      left: 85px;
+      background-image: url('../images/icons/arrow.svg');
+      transition: all .3s;
+    }
+
+  }
+
+}

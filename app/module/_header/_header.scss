@@ -1,0 +1,75 @@
+@import "../../app/scss/vars";
+
+.header {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header--404--page {
+  background-color: $bg;
+}
+
+.menu {
+
+  &__list-item {
+    display: inline-block;
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__list-link {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-stretch: 80%;
+    color: $title;
+    padding: 0px 2px 1px;
+    @extend %roboto-400;
+    transition: all .3s;
+
+    &:hover {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+      text-shadow: 0 0 .01px $accent, 0 0 .01px $accent, 0 0 .01px $accent;
+    }
+  }
+
+  &__list-link--active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+    text-shadow: 0 0 .01px $accent, 0 0 .01px $accent, 0 0 .01px $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link+.user-nav__link {
+    padding-left: 25px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: -9px;
+    right: -12px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+  }
+}
