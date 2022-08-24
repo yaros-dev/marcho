@@ -1,4 +1,5 @@
 @import "../../app/scss/vars";
+
 .video-fashion {
   background-color: $bg;
   background-image: url('../images/decor/fashion-bg.png');
@@ -40,7 +41,7 @@
   }
 
   &__title {
-    text-align: left;
+    margin-right: auto;
     margin-bottom: 30px;
   }
 
@@ -56,5 +57,34 @@
     @extend %roboto-400;
     letter-spacing: 3px;
   }
+
+}
+
+@media (max-width: 1050px) {
+  .video-fashion {
+    padding: 60px 0;
+    &__inner {
+      display: block;
+    }
+
+    &__popup {
+      max-width: 100%;
+      background-position: center top;
+      margin-bottom: 40px;
+      height: 270px;
+    }
+
+    &__subtitle{
+      font-size: 18px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+
+}
+
+@media (max-width: 620px) {
 
 }

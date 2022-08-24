@@ -1,6 +1,17 @@
 
 $(function () {
 
+  $('.footer-top__title-one').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
+
+
+  $('.menu__btn').on('click',function () {
+    $('.menu__list').toggleClass('menu__list--active');
+    
+  });
+
   $('.blog-page__slider').slick({
     infinite: true,
     arrows: true,
@@ -71,8 +82,7 @@ $(function () {
     dots: true,
     infinite: true,
     fade: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: false 
   });
 
   $(".star").rateYo({

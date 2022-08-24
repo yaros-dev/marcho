@@ -34,7 +34,7 @@ footer {
   }
 
   &__subscribe {
-    width: 500px;
+    max-width: 500px;
   }
 
 
@@ -153,5 +153,87 @@ footer {
   &__accept-img {
     display: inline-block;
     margin-left: 25px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer-top {
+    flex-wrap: wrap;
+
+    &__subscribe {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-top {
+    &__contact {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-top {
+    &__form {
+      display: flex;
+    }
+
+    &__title{
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+        &__subscribe {
+         margin-top: 0px;
+        }
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__accept {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-top {
+    &__form {
+      flex-wrap: wrap; 
+    }
+    &__account{
+      margin-right: 0;
+    }
+
+    &__form-input{
+      max-width: 100%;
+    }
+
+    &__form-btn { 
+      display: block;
+      margin-top: 15px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__box-list{
+      display: none;
+    }
+    &__title-one{
+      cursor: pointer;
+    }
+  }
+
+  .footer-bottom {
+    &__accept {
+      padding: 0px;
+    }
   }
 }

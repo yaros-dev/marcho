@@ -1,4 +1,5 @@
 @import "../../app/scss/vars";
+
 .promo {
   background-image: url('../images/promo/promo-bg.jpg');
   background-position: top center;
@@ -9,7 +10,7 @@
 
 
   &__inner {
-    width: 570px;
+    max-width: 570px;
     margin-left: auto;
 
   }
@@ -64,6 +65,25 @@
   &__text {
     margin-top: 15px;
   }
+}
 
+@media (max-width: 620px) {
+  .promo {
+    padding: 60px 0;
 
+    &__clock {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__clock-item {
+      margin: 20px 36px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .promo__clock-item {
+    margin: 10px 8px;
+  }
 }
