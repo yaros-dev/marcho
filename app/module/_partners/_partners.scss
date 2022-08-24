@@ -1,0 +1,31 @@
+@import "../../app/scss/vars";
+.partners {
+  padding-top: 120px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+     &__item img {
+       height: 60px;
+       width: 100%;
+       object-fit:  contain;
+     }
+}
+
+@media (max-width: 620px) {
+  .partners {
+      padding-top: 60px;
+      &__list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
+      &__item{
+        margin: 25px;
+      }
+    }
+}

@@ -9,12 +9,10 @@
 @font-face {
   font-family: 'quicksandmedium';
   src:local('Quicksand Medium');
-  src: url('../fonts/quicksand-medium-webfont.woff2') format('woff2'),
-    url('../fonts/quicksand-medium-webfont.woff') format('woff');
+  src: url('../fonts/quicksand-medium .woff2') format('woff2'),
+    url('../fonts/quicksand-medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
-  
-
 }
 
 @font-face {
@@ -23,7 +21,6 @@
     url('../fonts/roboto-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
