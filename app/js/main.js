@@ -263,10 +263,13 @@ $(function () {
 
   $('.button-list').on('click', function () {
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
+
   });
 
   $('.button-grid').on('click', function () {
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
   });
 
   $('.select-style, .product-one__item-num').styler();
