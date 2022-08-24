@@ -1228,8 +1228,6 @@
 }
 
 .blog-one {
-
-
   &__content {
     max-width: 770px;
   }
@@ -1449,6 +1447,8 @@
 #map {
   width: 100%;
   height: 450px;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact {

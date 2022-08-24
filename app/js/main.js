@@ -1,3 +1,213 @@
+let map;
+ 
+
+  function initMap() {
+
+    map = new google.maps.Map(document.getElementById("map"), {
+      
+      center: {
+        lat: 40.712497891670324,
+        lng: -73.9943920882609
+      },
+      zoom: 11, 
+      styles: [{
+          "featureType": "all",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "visibility": "simplified"
+          }]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "labels",
+          "stylers": [{
+              "visibility": "simplified"
+            },
+            {
+              "color": "#a31645"
+            }
+          ]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [{
+              "weight": "3.79"
+            },
+            {
+              "visibility": "on"
+            },
+            {
+              "color": "#ffecf0"
+            }
+          ]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [{
+            "visibility": "on"
+          }]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "visibility": "on"
+          }]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "all",
+          "stylers": [{
+              "visibility": "simplified"
+            },
+            {
+              "color": "#a31645"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [{
+              "saturation": "0"
+            },
+            {
+              "lightness": "0"
+            },
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "poi.business",
+          "elementType": "all",
+          "stylers": [{
+              "visibility": "simplified"
+            },
+            {
+              "color": "#d89ca8"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.business",
+          "elementType": "geometry",
+          "stylers": [{
+            "visibility": "on"
+          }]
+        },
+        {
+          "featureType": "poi.business",
+          "elementType": "geometry.fill",
+          "stylers": [{
+              "visibility": "on"
+            },
+            {
+              "saturation": "0"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.business",
+          "elementType": "labels",
+          "stylers": [{
+            "color": "#a31645"
+          }]
+        },
+        {
+          "featureType": "poi.business",
+          "elementType": "labels.icon",
+          "stylers": [{
+              "visibility": "simplified"
+            },
+            {
+              "lightness": "84"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "all",
+          "stylers": [{
+              "saturation": -100
+            },
+            {
+              "lightness": 45
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "simplified"
+          }]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [{
+              "color": "#d89ca8"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry.fill",
+          "stylers": [{
+              "visibility": "on"
+            },
+            {
+              "color": "#fedce3"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }
+      ]
+    });
+  }
+
+window.initMap = initMap;
 
 $(function () {
 
@@ -7,9 +217,9 @@ $(function () {
   });
 
 
-  $('.menu__btn').on('click',function () {
+  $('.menu__btn').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
-    
+
   });
 
   $('.blog-page__slider').slick({
@@ -33,7 +243,7 @@ $(function () {
     asNavFor: '.product-slide__big',
     focusOnSelect: true,
     slidesToShow: 4,
-    slidesToScroll:1,
+    slidesToScroll: 1,
     vertical: true,
     draggable: false,
   });
@@ -44,25 +254,28 @@ $(function () {
     arrows: false,
     fade: true,
   });
- 
- 
-  $('.shop-content__filter-btn').on('click', function() {
+
+
+  $('.shop-content__filter-btn').on('click', function () {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
   });
 
   $('.button-list').on('click', function () {
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
+
   });
 
   $('.button-grid').on('click', function () {
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
   });
 
   $('.select-style, .product-one__item-num').styler();
-   
-  
- 
+
+
+
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     onStart: function (data) {
@@ -82,7 +295,7 @@ $(function () {
     dots: true,
     infinite: true,
     fade: true,
-    autoplay: false 
+    autoplay: false
   });
 
   $(".star").rateYo({
@@ -136,7 +349,4 @@ $(function () {
   const deadline = $('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
 
- 
-  
 });
-
