@@ -45,7 +45,7 @@
 
 .shop {
   padding: 120px 0;
-
+ 
   &__inner {
     display: flex;
   }
@@ -54,6 +54,10 @@
     max-width: 372px;
     margin-right: 30px;
   }
+
+   &__filter-btn {
+    display: none;
+   }
 }
 
 .filter {
@@ -555,7 +559,7 @@
 
   &__item-btn {
     cursor: pointer;
-    text-transform: none;
+    text-transform: uppercase;
     border: none;
     padding: 12px 40px;
     background-color: $accent;
