@@ -10,7 +10,7 @@ const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
 const nunjucksrender = require('gulp-nunjucks-render'); 
 const browserSync = require('browser-sync').create();
-
+const zip = require('gulp-zip');
  
 function browsersync() {
   browserSync.init({
@@ -81,15 +81,20 @@ function images() {
 function build() {
   return src([
     'app/**/*.html',
-    'app/css/style.min.css',
+    'app/css/*.min.css',
     'app/js/main.min.js'
-  ], {base: 'app'})
+  ], {base: 'app'}) 
   .pipe(dest('dist'))
-  
+}
+
+function zipCompress() {
+  return src('dist/**/*.*')
+  .pipe(zip('dist.zip'))
+  .pipe(dest('.'))
 }
 
 function cleanDist() {
-  return del('dist')
+  return del(['dist','dist.zip'])
 }
 
 function watching() {
@@ -108,6 +113,9 @@ exports.watching = watching;
 exports.images = images;
 exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
+exports.zipCompress = zipCompress;
 
-exports.build = series(cleanDist, images, build);
+// <=======  Якщо треба архів то вкажи zipCompress в exports.build =======>
+
+exports.build = series(cleanDist, images, build, zipCompress);
 exports.default = parallel(nunjucks, styles, scripts, browsersync, watching);
